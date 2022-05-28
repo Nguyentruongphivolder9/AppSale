@@ -1,8 +1,10 @@
-package com.example.appsale;
+package com.example.appsale.presentation.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.appsale.R;
 
 public class MainActivity extends AppCompatActivity {
 
