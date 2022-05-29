@@ -26,6 +26,7 @@ public class SignInActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbarLogin);
         inputEdtEmail = findViewById(R.id.textEditEmail);
         intputEdtPassword = findViewById(R.id.textEditPassword);
+        tvSignUp = findViewById(R.id.textViewSignUp);
 
         setStatusBar();
     }
