@@ -38,7 +38,7 @@ public class SignInViewModel extends ViewModel {
                 if (response.isSuccessful()) {
                     AppResource<User> userResponse = response.body();
                     if (userResponse.data != null) {
-                        userData.setValue(new AppResource.Success<User>(userResponse.data));
+                        userData.setValue(new AppResource.Success<>(userResponse.data));
                     }
                 } else {
                     try {
