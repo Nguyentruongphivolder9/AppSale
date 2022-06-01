@@ -3,21 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appsale">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="AppSale"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppSale"
         tools:targetApi="31">
         <activity
-            android:name=".SigninActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.views.MainActivity"
+            android:name=".presentation.views.authentications.sign_in.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
