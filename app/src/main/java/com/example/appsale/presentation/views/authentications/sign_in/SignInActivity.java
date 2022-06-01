@@ -101,7 +101,6 @@ public class SignInActivity extends AppCompatActivity {
 
     private void setStatusBar() {
         Window window = getWindow();
-
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(getColor(R.color.blue));
