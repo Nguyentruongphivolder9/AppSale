@@ -23,8 +23,8 @@ import com.google.android.material.textfield.TextInputEditText;
 public class SignInActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    TextInputEditText inputEdtEmail , intputEdtPassword;
-    LinearLayout signin;
+    TextInputEditText inputEdtEmail , inputEdtPassword;
+    LinearLayout signIn;
     SignInViewModel signInViewModel;
     LinearLayout layoutLoading;
     @Override
@@ -34,8 +34,8 @@ public class SignInActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbarLogin);
         inputEdtEmail = findViewById(R.id.textEditEmail);
-        intputEdtPassword = findViewById(R.id.textEditPassword);
-        signin = findViewById(R.id.sign_in);
+        inputEdtPassword = findViewById(R.id.textEditPassword);
+        signIn = findViewById(R.id.sign_in);
         layoutLoading = findViewById(R.id.layout_loading);
 
         initView();
@@ -72,11 +72,11 @@ public class SignInActivity extends AppCompatActivity {
         });
 
 
-        signin.setOnClickListener(new View.OnClickListener() {
+        signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = inputEdtEmail.getText().toString();
-                String password = intputEdtPassword.getText().toString();
+                String password = inputEdtPassword.getText().toString();
 
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(SignInActivity.this, "Người dùng chưa nhập đủ thông tin", Toast.LENGTH_SHORT).show();
