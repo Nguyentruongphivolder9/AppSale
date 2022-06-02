@@ -1,9 +1,11 @@
 package com.example.appsale.data.datasources.remote;
 
+import com.example.appsale.data.models.Food;
 import com.example.appsale.data.models.User;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiService {
@@ -12,4 +14,8 @@ public interface ApiService {
 
     @POST("user/sign-up")
     Call<AppResource<User>> register(@Body User user);
+
+    @GET("product")
+    Call<AppResource<Food>> fetchFoods();
+
 }
