@@ -18,7 +18,8 @@ import com.google.android.material.textfield.TextInputEditText;
 public class SignUpActivity extends AppCompatActivity {
 
     TextInputEditText inputName, inputEmail, inputPassword, inputPhone, inputAddress;
-    LinearLayout signUp, layoutLoading;
+    LinearLayout signUp;
+    LinearLayout layoutLoading;
     SignUpViewModel signUpViewModel;
 
     @Override

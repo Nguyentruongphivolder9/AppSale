@@ -93,8 +93,8 @@ public class SignInActivity extends AppCompatActivity {
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignInActivity.this, SignUpActivity.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                startActivity(new Intent(SignInActivity.this,SignUpActivity.class));
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
             }
         });
     }
