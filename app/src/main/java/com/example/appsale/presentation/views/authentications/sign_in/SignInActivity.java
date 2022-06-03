@@ -17,9 +17,11 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.example.appsale.R;
+import com.example.appsale.common.SharePref;
 import com.example.appsale.data.datasources.remote.AppResource;
 import com.example.appsale.data.models.User;
 import com.example.appsale.presentation.views.authentications.sign_up.SignUpActivity;
+import com.example.appsale.presentation.views.home.HomeActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class SignInActivity extends AppCompatActivity {
@@ -65,7 +67,9 @@ public class SignInActivity extends AppCompatActivity {
                         break;
                     case SUCCESS:
                         Toast.makeText(SignInActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                        SharePref.getInstance(SignInActivity.this).setToken(userAppResource.data.getToken());
                         layoutLoading.setVisibility(View.GONE);
+                        startActivity(new Intent(SignInActivity.this, HomeActivity.class));
                         break;
                     case ERROR:
                         Toast.makeText(SignInActivity.this, userAppResource.message, Toast.LENGTH_SHORT).show();
@@ -93,8 +97,8 @@ public class SignInActivity extends AppCompatActivity {
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignInActivity.this,SignUpActivity.class));
-                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                startActivity(new Intent(SignInActivity.this, SignUpActivity.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
     }
