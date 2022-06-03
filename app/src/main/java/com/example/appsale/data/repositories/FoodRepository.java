@@ -6,6 +6,8 @@ import com.example.appsale.data.datasources.remote.RetrofitClient;
 import com.example.appsale.data.models.Food;
 import com.example.appsale.data.models.User;
 
+import java.util.List;
+
 import retrofit2.Call;
 
 public class FoodRepository {
@@ -14,7 +16,7 @@ public class FoodRepository {
     public FoodRepository() { apiService = RetrofitClient.getInstance().getApiService();
     }
 
-    public Call<AppResource<Food>> fetchFood() {
+    public Call<AppResource<List<Food>>> fetchFood() {
         return apiService.fetchFoods();
     }
 }

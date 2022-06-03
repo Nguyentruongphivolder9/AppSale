@@ -3,6 +3,8 @@ package com.example.appsale.data.datasources.remote;
 import com.example.appsale.data.models.Food;
 import com.example.appsale.data.models.User;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -16,6 +18,6 @@ public interface ApiService {
     Call<AppResource<User>> register(@Body User user);
 
     @GET("product")
-    Call<AppResource<Food>> fetchFoods();
+    Call<AppResource<List<Food>>> fetchFoods();
 
 }

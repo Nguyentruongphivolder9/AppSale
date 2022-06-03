@@ -4,18 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AppSale/app/src/main/res/drawable/background_button_border.xml" value="0.113" />
+        <entry key="..\:/AppSale/app/src/main/res/drawable/bg_button_conner.xml" value="0.1" />
         <entry key="..\:/AppSale/app/src/main/res/drawable/ic_email.xml" value="0.113" />
         <entry key="..\:/AppSale/app/src/main/res/drawable/ic_map.xml" value="0.1" />
         <entry key="..\:/AppSale/app/src/main/res/drawable/ic_password.xml" value="0.113" />
         <entry key="..\:/AppSale/app/src/main/res/drawable/ic_phone.xml" value="0.1" />
         <entry key="..\:/AppSale/app/src/main/res/drawable/ic_user.xml" value="0.1" />
         <entry key="..\:/AppSale/app/src/main/res/layout-land/activity_sign_in.xml" value="0.16666666666666666" />
+        <entry key="..\:/AppSale/app/src/main/res/layout/activity_home.xml" value="0.24947916666666667" />
         <entry key="..\:/AppSale/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/AppSale/app/src/main/res/layout/activity_sign_in.xml" value="0.176" />
         <entry key="..\:/AppSale/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/AppSale/app/src/main/res/layout/activity_signin.xml" value="0.264" />
         <entry key="..\:/AppSale/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/AppSale/app/src/main/res/layout/activity_splath.xml" value="0.24947916666666667" />
+        <entry key="..\:/AppSale/app/src/main/res/layout/layout_item_food.xml" value="0.12280701754385964" />
         <entry key="..\:/AppSale/app/src/main/res/layout/layout_loading.xml" value="0.1" />
       </map>
     </option>
