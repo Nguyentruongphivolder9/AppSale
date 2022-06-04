@@ -52,7 +52,13 @@ public class SignInActivity extends AppCompatActivity {
     private void initView() {
         setStatusBar();
 
-        signInViewModel = new ViewModelProvider(this).get(SignInViewModel.class);
+        signInViewModel = new ViewModelProvider(this, new ViewModelProvider.Factory() {
+            @NonNull
+            @Override
+            public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+                return (T) new SignInViewModel(getApplicationContext());
+            }
+        }).get(SignInViewModel.class);
     }
 
     private void event() {

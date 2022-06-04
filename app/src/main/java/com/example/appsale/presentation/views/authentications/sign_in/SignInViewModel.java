@@ -1,5 +1,7 @@
 package com.example.appsale.presentation.views.authentications.sign_in;
 
+import android.content.Context;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -21,8 +23,8 @@ public class SignInViewModel extends ViewModel {
     private AuthenticationRepository repository;
     private MutableLiveData<AppResource<User>> userData = new MutableLiveData<>();
 
-    public SignInViewModel() {
-        repository = new AuthenticationRepository();
+    public SignInViewModel(Context context) {
+        repository = new AuthenticationRepository(context);
     }
 
     public LiveData<AppResource<User>> getUserData(){

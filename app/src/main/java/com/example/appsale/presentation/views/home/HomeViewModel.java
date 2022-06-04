@@ -1,5 +1,7 @@
 package com.example.appsale.presentation.views.home;
 
+import android.content.Context;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -22,8 +24,8 @@ public class HomeViewModel extends ViewModel {
     private FoodRepository repository;
     private MutableLiveData<AppResource<List<Food>>> foodsData = new MutableLiveData<>();
 
-    public HomeViewModel() {
-        repository = new FoodRepository();
+    public HomeViewModel(Context context) {
+        repository = new FoodRepository(context);
     }
 
     public LiveData<AppResource<List<Food>>> getFoods(){
