@@ -44,13 +44,10 @@ public class RetrofitClient {
                 .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
-                        Request newRequest = chain.request();
                         String token = SharePref.getInstance(context).getToken();
-                        if (!token.isEmpty()) {
-                            newRequest.newBuilder()
-                                    .addHeader("Authorization","Bearer" + token)
-                                    .build();
-                        }
+                        Request newRequest = chain.request().newBuilder()
+                                .header("Authorization", "Bearer " + token)
+                                .build();
                         return chain.proceed(newRequest);
                     }
                 })
